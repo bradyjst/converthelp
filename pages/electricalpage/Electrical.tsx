@@ -3,23 +3,23 @@ import { formulas } from "../../formulas";
 import FormulaModal from "../../components/modal/FormulaModal";
 import "../styles/Category.css";
 
-export default function Medical() {
+export default function Electrical() {
 	const { slug } = useParams();
 	const navigate = useNavigate();
 
-	const medicalFormulas = formulas.medical;
-	const active = medicalFormulas.find((f) => f.slug === slug);
+	const electricalFormulas = formulas.electrical;
+	const active = electricalFormulas.find((f) => f.slug === slug);
 
 	return (
 		<div className="category">
 			<div className="categoryHeader">
-				<h1>Medical Conversions</h1>
-				<p className="subtitle">Common nursing and medication calculations.</p>
+				<h1>Electrical Conversions</h1>
+				<p className="subtitle">Quick formulas for electricians and techs.</p>
 			</div>
 
 			<div className="list">
-				{medicalFormulas.map((f) => (
-					<Link key={f.slug} to={`/medical/${f.slug}`} className="item">
+				{electricalFormulas.map((f) => (
+					<Link key={f.slug} to={`/electrical/${f.slug}`} className="item">
 						<div className="item-title">{f.title}</div>
 						<div className="item-formula">{f.formula}</div>
 					</Link>
@@ -27,7 +27,10 @@ export default function Medical() {
 			</div>
 
 			{active && (
-				<FormulaModal formula={active} onClose={() => navigate("/medical")} />
+				<FormulaModal
+					formula={active}
+					onClose={() => navigate("/electrical")}
+				/>
 			)}
 		</div>
 	);

@@ -30,7 +30,44 @@ export const formulas = {
     }
   ],
 
-  electrical: [],
+  electrical: [
+  {
+    slug: "amps-to-watts",
+    title: "Amps to Watts",
+    formula: "Watts = Amps × Volts",
+    inputs: [
+      { key: "amps", label: "Amps (A)" },
+      { key: "volts", label: "Volts (V)" }
+    ],
+    quickTip:
+      "On a 120V circuit, just multiply amps by 120 for a quick estimate.",
+    calculate: (amps: number, volts: number) => amps * volts
+  },
+  {
+    slug: "watts-to-amps",
+    title: "Watts to Amps",
+    formula: "Amps = Watts ÷ Volts",
+    inputs: [
+      { key: "watts", label: "Watts (W)" },
+      { key: "volts", label: "Volts (V)" }
+    ],
+    quickTip:
+      "Most household outlets are 120V, so divide watts by 120.",
+    calculate: (watts: number, volts: number) => watts / volts
+  },
+  {
+    slug: "ohms-law",
+    title: "Ohm’s Law",
+    formula: "Volts = Amps × Ohms",
+    inputs: [
+      { key: "amps", label: "Amps (A)" },
+      { key: "ohms", label: "Resistance (Ω)" }
+    ],
+    quickTip:
+      "Voltage drop is current times resistance.",
+    calculate: (amps: number, ohms: number) => amps * ohms
+  }
+],
   mechanical: [],
   home: [],
   cooking: [],
