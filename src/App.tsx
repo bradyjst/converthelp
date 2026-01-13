@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "../components/layout/Layout";
-import Homepage from "../components/homepage/Homepage";
+import Homepage from "../pages/homepage/Homepage";
+import Medical from "../pages/medicalpage/Medical";
 
 export default function App() {
 	return (
@@ -8,7 +9,8 @@ export default function App() {
 			<Route element={<Layout />}>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/electrical" element={<div>Electrical</div>} />
-				<Route path="/medical" element={<div>Medical</div>} />
+				<Route path="/medical" element={<Medical />} />
+				<Route path="/medical/:slug" element={<Medical />} />
 				<Route path="/mechanical" element={<div>Mechanical</div>} />
 				<Route path="/home" element={<div>Home</div>} />
 				<Route path="/cooking" element={<div>Cooking</div>} />

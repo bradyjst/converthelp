@@ -1,0 +1,72 @@
+.modalBackdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.65);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+}
+
+.modal {
+	background: var(--bg-panel);
+	color: var(--text);
+	border-radius: 16px;
+	padding: 2rem;
+	max-width: 520px;
+	width: 90%;
+	box-shadow: 0 40px 100px var(--shadow);
+}
+
+.modalHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.closeBtn {
+	background: none;
+	border: none;
+	font-size: 1.2rem;
+	color: var(--muted);
+	cursor: pointer;
+}
+
+.modalFormula {
+	margin-top: 0.5rem;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+.calc {
+	margin-top: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.field input {
+	padding: 0.6rem;
+	border-radius: 8px;
+	border: 1px solid var(--border);
+	background: var(--bg);
+	color: var(--text);
+}
+
+.result {
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin-top: 1rem;
+}
+
+.quickTip {
+	color: var(--muted);
+	font-size: 0.85rem;
+	margin-top: 0.5rem;
+}

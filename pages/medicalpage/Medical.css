@@ -1,0 +1,77 @@
+.category {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.categoryHeader {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.categoryHeader h1 {
+	font-size: 2.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.categoryHeader::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 2px;
+	background: var(--border);
+	margin: 1.5rem auto 0;
+}
+
+.list {
+	margin-top: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.item {
+	background: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: 14px;
+	padding: 1.5rem;
+	text-decoration: none;
+	color: var(--text);
+	box-shadow: 0 10px 30px var(--shadow);
+	transition: transform 0.15s ease;
+}
+
+.item:hover {
+	transform: translateY(-2px);
+}
+
+.item-title {
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+.item-formula {
+	color: var(--muted);
+	margin-top: 0.25rem;
+	font-size: 0.9rem;
+}
+
+.modalBackdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+}
+
+.modal {
+	background: var(--bg-panel);
+	color: var(--text);
+	border-radius: 16px;
+	padding: 2rem;
+	max-width: 500px;
+	width: 90%;
+	box-shadow: 0 30px 80px var(--shadow);
+}
