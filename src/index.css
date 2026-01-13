@@ -1,0 +1,32 @@
+/* Default theme (light) */
+:root {
+	--bg: #f8fafc;
+	--bg-panel: #ffffff;
+	--text: #0f172a;
+	--muted: #64748b;
+	--border: #e5e7eb;
+	--shadow: rgba(0, 0, 0, 0.06);
+}
+
+/* Dark theme */
+.theme-dark {
+	--bg: #0b1220;
+	--bg-panel: #111827;
+	--text: #e5e7eb;
+	--muted: #94a3b8;
+	--border: #1f2937;
+	--shadow: rgba(0, 0, 0, 0.6);
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	background: var(--bg);
+	color: var(--text);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}

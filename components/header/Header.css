@@ -1,0 +1,37 @@
+.header {
+	width: 100%;
+	background: var(--bg-panel);
+	border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1.25rem 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 1.6rem;
+	font-weight: 800;
+	color: var(--text);
+	text-decoration: none;
+	letter-spacing: -0.02em;
+}
+
+.themeToggle {
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 999px;
+	padding: 0.4rem 0.75rem;
+	font-size: 0.85rem;
+	cursor: pointer;
+	color: var(--text);
+	box-shadow: 0 6px 15px var(--shadow);
+}
+
+.themeToggle:hover {
+	transform: translateY(-1px);
+}
